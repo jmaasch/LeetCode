@@ -61,7 +61,6 @@ public class MayChallengeFindSingleElement {
             }
         }
         return nums[2 * lo];
-
     }
 	
 	// Test in main.
