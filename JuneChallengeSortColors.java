@@ -29,37 +29,37 @@ public class JuneChallengeSortColors {
 	 * @param int[] nums
 	 * @return void
 	 */
-    public static void sortColors(int[] nums) {
-        
-    	// First pass: count elements per color.
-    	int totalRed = 0;
-    	int totalWhite = 0;
-    	
-    	for (int num : nums) {
-    		if (num == 0) totalRed++;
-    		else if (num == 1) totalWhite++;
-    	}
-    	
-    	// Second pass: repopulate int array.
-    	int index = 0;
-    	while (index < totalRed) {
-    		nums[index] = 0;
-    		index++;
-    	}
-    	while (index < totalRed + totalWhite) {
-    		nums[index] = 1;
-    		index++;
-    	}
-    	while (index < nums.length) {
-    		nums[index] = 2;
-    		index++;
-    	}
-    	
-    }
+	public static void sortColors(int[] nums) {
 
-    // Test in main.
+		// First pass: count elements per color.
+		int totalRed = 0;
+		int totalWhite = 0;
+
+		for (int num : nums) {
+			if (num == 0) totalRed++;
+			else if (num == 1) totalWhite++;
+		}
+
+		// Second pass: repopulate int array.
+		int index = 0;
+		while (index < totalRed) {
+			nums[index] = 0;
+			index++;
+		}
+		while (index < totalRed + totalWhite) {
+			nums[index] = 1;
+			index++;
+		}
+		while (index < nums.length) {
+			nums[index] = 2;
+			index++;
+		}
+
+	}
+
+	// Test in main.
 	public static void main(String[] args) {
-		
+
 		int[] testArray = {2, 0, 2, 1, 1, 0};
 		JuneChallengeSortColors.sortColors(testArray);
 		for (int element : testArray) {
